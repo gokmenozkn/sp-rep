@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import { useTaskContext } from '../../context/TaskContext';
 import { useEffect } from 'react';
-import { useAuthContext } from '../../context/AuthContext'
+import { useAuthContext } from '../../context/AuthContext';
 import { Services } from '../../helpers/Services';
 
 export default function Task() {
@@ -116,7 +116,7 @@ export default function Task() {
                     defaultChecked={isFourthChecked}
                     onChange={() => setIsFourthChecked(!isFourthChecked)}
                     onClick={() =>
-                      Services.Update(id, 'fourthRepetition', !isThirdChecked)
+                      Services.Update(id, 'fourthRepetition', !isFourthChecked)
                     }
                     className='w-5 h-5 rounded'
                   />
